@@ -10,8 +10,12 @@ import SwiftUI
 struct CountingScreen: View {
     @Binding var projectName: String
     
-    @State private var counter = 0
     @State private var showAlert = false
+    
+    @State private var rowNumber = 1
+    
+    @State private var stitchNumber = 0
+    @State private var numberStitchRow = 5
     
     var body: some View {
         VStack{
@@ -21,10 +25,25 @@ struct CountingScreen: View {
 //            Button(action: {UIApplication.shared.isIdleTimerDisabled = false}, label: {
 //                Text("Do go to sleep")
 //            })
+            
+            Text("\(projectName)")
+                .foregroundStyle(.tealBlue)
+                .fontWeight(.heavy)
+                .font(.system(size: 30))
+            
+            HStack {
+                Text("Row: \(rowNumber)")
+                Text("Stitch: \(stitchNumber)")
+            }
+            .foregroundStyle(.dustyRed)
+            .font(.system(size: 20))
+            .fontWeight(.semibold)
+            
             ZStack {
                 // Counter button
                 Button {
-                    counter += 1
+                    stitchNumber += 1
+                    updateRow()
                 } label: {
                     // Circle Button
                     Circle()
@@ -34,7 +53,7 @@ struct CountingScreen: View {
                 }
                 
                 // Text on top
-                Text("\(counter)")
+                Text("\(stitchNumber)")
                     .font(.system(size: 104))
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
@@ -42,10 +61,11 @@ struct CountingScreen: View {
             
             // Undo button
             Button {
-                if counter == 0 {
+                if stitchNumber == 0 {
                     showAlert.toggle()
                 } else {
-                    counter -= 1
+                    stitchNumber -= 1
+                    updateRow()
                 }
             } label: {
                 ZStack {
@@ -64,6 +84,17 @@ struct CountingScreen: View {
                 Button("OK", role: .cancel){}
             }
                 
+        }
+    }
+    
+    func updateRow(){
+        if stitchNumber != 0 {
+            let result = (stitchNumber % numberStitchRow) == 0 ? 1 : 0
+            rowNumber += result
+            
+            if result == 1 {
+                stitchNumber = 1
+            }
         }
     }
 }
