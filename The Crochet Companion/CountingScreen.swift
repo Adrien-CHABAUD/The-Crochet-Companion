@@ -7,12 +7,20 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CountingScreen: View {
+    @Binding var projectName: String
+    
     @State private var counter = 0
     @State private var showAlert = false
-    @State private var animate: Bool = false
+    
     var body: some View {
         VStack{
+//            Button(action: {UIApplication.shared.isIdleTimerDisabled = true}, label: {
+//                Text("Do not go to sleep")
+//            }).padding(.bottom)
+//            Button(action: {UIApplication.shared.isIdleTimerDisabled = false}, label: {
+//                Text("Do go to sleep")
+//            })
             ZStack {
                 // Counter button
                 Button {
@@ -61,5 +69,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    CountingScreen(projectName: .constant("Twisted Mittens"))
 }

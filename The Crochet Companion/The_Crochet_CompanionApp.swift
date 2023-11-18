@@ -11,7 +11,7 @@ import SwiftUI
 struct The_Crochet_CompanionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProjectScreen()
         }
     }
 }
