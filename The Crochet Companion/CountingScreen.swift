@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CountingScreen: View {
-    @Binding var projectName: String
+    var projectName: String
     
     @State private var showAlert = false
     
@@ -100,5 +100,5 @@ struct CountingScreen: View {
 }
 
 #Preview {
-    CountingScreen(projectName: .constant("Twisted Mittens"))
+    CountingScreen(projectName: "Twisted Mittens")
 }

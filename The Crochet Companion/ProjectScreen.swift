@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct ProjectScreen: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List {
+                NavigationLink("Test_1"){
+                    CountingScreen(projectName: "Test_1")
+                }
+                NavigationLink("Test_2"){
+                    CountingScreen(projectName: "Test_2")
+                }
+                NavigationLink("Test_3"){
+                    CountingScreen(projectName: "Test_3")
+                }
+            }
+        }
     }
 }
 
