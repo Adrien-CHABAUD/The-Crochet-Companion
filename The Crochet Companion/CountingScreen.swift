@@ -9,13 +9,14 @@ import SwiftUI
 
 struct CountingScreen: View {
     var projectName: String
+    var numberStitchRow: Int
     
     @State private var showAlert = false
     
     @State private var rowNumber = 1
     
     @State private var stitchNumber = 0
-    @State private var numberStitchRow = 5
+    //@State private var numberStitchRow = 5
     
     var body: some View {
         VStack{
@@ -100,5 +101,5 @@ struct CountingScreen: View {
 }
 
 #Preview {
-    CountingScreen(projectName: "Twisted Mittens")
+    CountingScreen(projectName: "Twisted Mittens", numberStitchRow: 4)
 }

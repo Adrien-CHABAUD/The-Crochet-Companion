@@ -8,18 +8,14 @@
 import SwiftUI
 
 struct ProjectScreen: View {
+    @ObservedObject var mockData = DataMockUp()
     
     var body: some View {
         NavigationStack {
-            List {
-                NavigationLink("Test_1"){
-                    CountingScreen(projectName: "Test_1")
-                }
-                NavigationLink("Test_2"){
-                    CountingScreen(projectName: "Test_2")
-                }
-                NavigationLink("Test_3"){
-                    CountingScreen(projectName: "Test_3")
+            
+            List(mockData.projectItems){data in
+                NavigationLink(data.name){
+                    CountingScreen(projectName: data.name, numberStitchRow: data.stitchInRow)
                 }
             }
         }

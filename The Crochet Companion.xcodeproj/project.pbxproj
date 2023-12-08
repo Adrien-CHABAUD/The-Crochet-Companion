@@ -12,6 +12,8 @@
 		E95640462B05B3980062B4D3 /* CountingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95640452B05B3980062B4D3 /* CountingScreen.swift */; };
 		E95640482B05B3990062B4D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95640472B05B3990062B4D3 /* Assets.xcassets */; };
 		E956404B2B05B3990062B4D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E956404A2B05B3990062B4D3 /* Preview Assets.xcassets */; };
+		E98932232B23DEEA00CBC6D5 /* ProjectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98932222B23DEEA00CBC6D5 /* ProjectItem.swift */; };
+		E98932262B23E05700CBC6D5 /* DataMockUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98932252B23E05700CBC6D5 /* DataMockUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		E95640452B05B3980062B4D3 /* CountingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingScreen.swift; sourceTree = "<group>"; };
 		E95640472B05B3990062B4D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E956404A2B05B3990062B4D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E98932222B23DEEA00CBC6D5 /* ProjectItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectItem.swift; sourceTree = "<group>"; };
+		E98932252B23E05700CBC6D5 /* DataMockUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMockUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 				E95640432B05B3980062B4D3 /* The_Crochet_CompanionApp.swift */,
 				E954C3522B0846A3003B59E3 /* ProjectScreen.swift */,
 				E95640452B05B3980062B4D3 /* CountingScreen.swift */,
+				E98932252B23E05700CBC6D5 /* DataMockUp.swift */,
 				E95640472B05B3990062B4D3 /* Assets.xcassets */,
 				E95640492B05B3990062B4D3 /* Preview Content */,
+				E98932242B23DEF000CBC6D5 /* Data */,
 			);
 			path = "The Crochet Companion";
 			sourceTree = "<group>";
@@ -68,6 +74,14 @@
 				E956404A2B05B3990062B4D3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E98932242B23DEF000CBC6D5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E98932222B23DEEA00CBC6D5 /* ProjectItem.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +156,9 @@
 			files = (
 				E95640462B05B3980062B4D3 /* CountingScreen.swift in Sources */,
 				E95640442B05B3980062B4D3 /* The_Crochet_CompanionApp.swift in Sources */,
+				E98932232B23DEEA00CBC6D5 /* ProjectItem.swift in Sources */,
 				E954C3532B0846A3003B59E3 /* ProjectScreen.swift in Sources */,
+				E98932262B23E05700CBC6D5 /* DataMockUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
